@@ -18,7 +18,7 @@ public class ChordGraph {
     }
 
     public ArrayList<int[]> generateProgressions(int length) {
-        int i = 1 + ((int) Math.random() * 7 );
+        int i = (int) (1 + (Math.random() * 7));
 
         ArrayList progressions = new ArrayList();
 
@@ -39,12 +39,12 @@ public class ChordGraph {
             //otherwise, we do not add anything.
             return;
         }
-        System.out.println("Current vertex: " + current % 10);
+        //perform BFS search.
         for (int a : g.adj(current % 10)) {
 
             generateProgressions(first, current * 10 + a, length - 1, result);
         }
-        //perform BFS search.
+
 
 
     }
