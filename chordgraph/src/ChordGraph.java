@@ -43,7 +43,7 @@ public class ChordGraph {
         for (int a : g.adj(current % 10)) {
 
             generateProgressions(first, current * 10 + a, length - 1, result);
-        }
+        } //oh no
 
 
 
